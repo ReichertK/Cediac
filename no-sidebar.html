@@ -16,34 +16,28 @@
 						<h1><a href="index.html" id="logo">Cediac <em>centro de imagenes</em></a></h1>
 
 					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Inicio</a></li>
-								<li>
-									<a href="#">Sucursales</a>
-									<ul>
-										<li><a href="#">Lorem dolor</a></li>
-										<li><a href="#">Magna phasellus</a></li>
-										<li><a href="#">Etiam sed tempus</a></li>
-										<li>
-											<a href="#">Submenu</a>
-											<ul>
-												<li><a href="#">Lorem dolor</a></li>
-												<li><a href="#">Phasellus magna</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam nisl</a></li>
-												<li><a href="#">Veroeros feugiat</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Veroeros feugiat</a></li>
-									</ul>
-								</li>
-								<li><a href="left-sidebar.html">Izquierda Sidebar</a></li>
-								<li><a href="right-sidebar.html">Derecha Sidebar</a></li>
-								<li><a href="two-sidebar.html">Doble</a></li>
-								<li class="current"><a href="no-sidebar.html">No Sidebar</a></li>
-							</ul>
-						</nav>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Inicio</a></li>
+							<li>
+								<a href="#">Sucursales</a>
+								<ul>
+									<li><a href="#">Quilmes</a></li>
+									<li>
+										<a href="#">Berazategui</a>
+										<ul>
+											<li><a href="#">Calle 10</a></li>
+											<li><a href="#">Calle 7</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="left-sidebar.html">izquieda Sidebar</a></li>
+							<li><a href="right-sidebar.html">derecha Sidebar</a></li>
+							<li><a href="two-sidebar.html">doble Sidebar</a></li>
+							<li class="current"><a href="no-sidebar.html">No Sidebar</a></li>
+						</ul>
+					</nav>
 
 				</div>
 
@@ -117,26 +111,7 @@
 									<li><a href="#">Rutrum amet varius</a></li>
 								</ul>
 							</section>
-							<section class="col-6 col-12-narrower">
-								<h3>Contactenos</h3>
-								<form>
-									<div class="row gtr-50">
-										<div class="col-6 col-12-mobilep">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="col-6 col-12-mobilep">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="col-12">
-											<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
-										</div>
-										<div class="col-12">
-											<ul class="actions">
-												<li><input type="submit" class="button alt" value="Enviar" /></li>
-											</ul>
-										</div>
-									</div>
-								</form>
+							<div class="col-6 col-12-narrower" id="form-container">
 							</section>
 						</div>
 					</div>
@@ -145,8 +120,8 @@
 						<ul class="icons">
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<!-- <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li> -->
+							<!-- <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li> -->
+							<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							<li><a href="#" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li>
 						</ul>
 
@@ -168,6 +143,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				// Cargar el contenido del formulario.html en el contenedor del formulario
+				fetch('formulario.html')
+					.then(response => response.text())
+					.then(content => {
+						document.getElementById('form-container').innerHTML = content;
+					});
+			</script>
 	</body>
 </html>
