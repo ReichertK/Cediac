@@ -51,7 +51,6 @@
 				.appendTo($body)
 				.panel({
 					trigger: 'click',
-					// closeOnClick: true
 					delay: 500,
 					hideOnClick: true,
 					hideOnSwipe: true,
